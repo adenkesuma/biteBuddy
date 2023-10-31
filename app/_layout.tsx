@@ -1,6 +1,6 @@
 import { Stack } from 'expo-router'
 import HeaderBar from '../components/HeaderBar'
-import BottomSheetModalProvider from '@gorhom/bottom-sheet'
+import { BottomSheetModalProvider } from '@gorhom/bottom-sheet'
 
 export const unstable_settings = {
   initialRouteName: 'index',

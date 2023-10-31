@@ -10,20 +10,34 @@ import {
 
 import Colors from '../constants/Colors'
 import SearchBar from './SearchBar'
+import BottomSheet from './BottomSheet'
+import { useRef } from 'react'
+import { BottomSheetModal } from '@gorhom/bottom-sheet'
 
 const HeaderBar = () => {
+  const bottomSheetRef = useRef<BottomSheetModal>(null)
+
+  const openModal = () => bottomSheetRef.current?.present()
+
   return (
     <SafeAreaView style={styles.saveView}>
+      <BottomSheet 
+        ref={bottomSheetRef}
+      />
+
       <View style={styles.containerHeaderBar}>
         <View style={styles.containerLeftHeader}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={openModal}>
             <Image 
               source={require('../assets/images/favicon.png')}
               style={styles.logo}
             />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.titleHeaderBar}>
+          <TouchableOpacity 
+            style={styles.titleHeaderBar}
+            onPress={openModal}
+          >
             <Text style={styles.subTitle}>Delivery . Now</Text>
             <View style={styles.titleHeaderRow}>
               <Text style={styles.title}>San Francisco, CA</Text>
