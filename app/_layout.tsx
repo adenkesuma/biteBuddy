@@ -11,7 +11,7 @@ const RootLayoutNav = () => {
       <Stack.Screen 
         name="index" 
         options={{
-          header: () => <HeaderBar />
+          header: () => <HeaderBar /> 
         }} 
       />
 

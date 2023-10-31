@@ -1,4 +1,3 @@
-import Colors from '../constants/Colors'
 import { Ionicons } from '@expo/vector-icons'
 import { 
   StyleSheet,
@@ -8,6 +7,9 @@ import {
   Image
 } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
+
+import Colors from '../constants/Colors'
+import SearchBar from './SearchBar'
 
 const HeaderBar = () => {
   return (
@@ -26,7 +28,7 @@ const HeaderBar = () => {
             <View style={styles.titleHeaderRow}>
               <Text style={styles.title}>San Francisco, CA</Text>
               <Ionicons 
-                name="chevron-down-outline"
+                name="chevron-down"
                 size={20}
                 color={Colors.primary}
               />
@@ -42,6 +44,8 @@ const HeaderBar = () => {
           />
         </TouchableOpacity>
       </View>
+
+      <SearchBar />
     </SafeAreaView>
   )
 }
