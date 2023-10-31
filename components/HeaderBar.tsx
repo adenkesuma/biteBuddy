@@ -4,9 +4,9 @@ import {
   SafeAreaView, 
   Text,
   View,
-  Image
+  Image,
+  TouchableOpacity
 } from 'react-native'
-import { TouchableOpacity } from 'react-native-gesture-handler'
 
 import Colors from '../constants/Colors'
 import SearchBar from './SearchBar'
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
   profileHeaderBar: {
     backgroundColor: Colors.lightGray,
     padding: 10,
-    borderRadius: 50
+    borderRadius: 10
   },
   title: {
     fontSize: 16,
